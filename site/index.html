@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа курьером Яндекс Еда — бонус 5000 ₽</title>
+    <meta name="description" content="Регистрация курьером в Яндекс Еда по партнёрской ссылке. Бонус 5000 ₽ для новичков при выполнении условий. ИП Ильясов Т.В.">
+
+    <link rel="canonical" href="https://kuriery-pro.online/">
+
+    <meta property="og:title" content="Работа курьером в Яндекс Еда — бонус 5000 ₽">
+    <meta property="og:description" content="Свободный график • До 160 000 ₽/мес • Бонус новичкам при выполнении условий">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kuriery-pro.online/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-yellow: #FCE000; --primary-dark: #1A1A1A; --secondary-bg: #F4F4F4;
+            --text-main: #222222; --text-muted: #666666; --accent-blue: #0088CC;
+            --success-green: #2ECC71; --border-radius: 16px; --card-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #ffffff; color: var(--text-main);
+            line-height: 1.5; overflow-x: hidden;
+        }
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+
+        .header {
+            background: linear-gradient(135deg, #FFDE33 0%, #FCE000 100%);
+            padding: 120px 20px 100px; text-align: center;
+            position: relative; overflow: hidden;
+            border-bottom-left-radius: 40px; border-bottom-right-radius: 40px;
+        }
+        .header::before, .header::after {
+            content: ''; position: absolute; border-radius: 50%;
+            background: rgba(255,255,255,0.3); z-index: 0;
+        }
+        .header::before { width: 400px; height: 400px; top: -200px; left: -100px; }
+        .header::after { width: 300px; height: 300px; bottom: -100px; right: -50px; }
+        .header-content { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+        .badge {
+            display: inline-block; background: var(--primary-dark); color: var(--primary-yellow);
+            padding: 8px 20px; border-radius: 50px; font-weight: 600; font-size: 0.9em;
+            margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        h1 { font-size: 3.5em; font-weight: 900; margin-bottom: 20px; color: var(--primary-dark); line-height: 1.1; letter-spacing: -1px; }
+        .header-subtitle { font-size: 1.4em; margin-bottom: 18px; color: #333; font-weight: 500; }
+
+        .disclaimer {
+            max-width: 760px;
+            margin: 0 auto 28px;
+            font-size: 0.95em;
+            color: rgba(0,0,0,0.65);
+        }
+        .disclaimer a { color: rgba(0,0,0,0.75); text-decoration: underline; }
+
+        .cta-primary {
+            display: inline-flex; align-items: center; gap: 10px; padding: 20px 45px;
+            background: var(--primary-dark); color: white; text-decoration: none;
+            border-radius: var(--border-radius); font-size: 1.2em; font-weight: 700;
+            transition: all 0.3s ease; box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        .cta-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(0,0,0,0.4); background: #333; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+        .tg-banner {
+            background: white; border: 1px solid #E0E0E0; padding: 30px 40px;
+            display: flex; justify-content: space-between; align-items: center;
+            border-radius: var(--border-radius); box-shadow: var(--card-shadow);
+            margin-top: -60px; position: relative; z-index: 10; flex-wrap: wrap; gap: 20px;
+        }
+        .tg-banner-content h3 { font-size: 1.4em; margin-bottom: 5px; }
+        .tg-banner-content p { color: var(--text-muted); }
+        .tg-btn {
+            background: #2AABEE; color: white; text-decoration: none; padding: 12px 30px;
+            border-radius: 10px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: background 0.3s;
+        }
+        .tg-btn:hover { background: #229ED9; }
+
+        .section-title { font-size: 2.8em; font-weight: 800; text-align: center; margin-bottom: 60px; color: var(--primary-dark); }
+        .section-title span { position: relative; z-index: 1; }
+        .section-title span::after { content: ''; position: absolute; bottom: 5px; left: 0; width: 100%; height: 12px; background: rgba(252, 224, 0, 0.5); z-index: -1; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .benefit-card { background: white; padding: 35px; border-radius: var(--border-radius); border: 1px solid #eee; transition: all 0.3s ease; }
+        .benefit-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: transparent; }
+        .benefit-icon { width: 60px; height: 60px; background: #FFF9C4; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.8em; margin-bottom: 20px; }
+        .benefit-card h3 { font-size: 1.3em; margin-bottom: 10px; font-weight: 700; }
+        .benefit-card p { color: var(--text-muted); font-size: 0.95em; line-height: 1.6; }
+
+        .bonus-card {
+            background: linear-gradient(135deg, #1A1A1A 0%, #333 100%); color: white;
+            padding: 50px; border-radius: var(--border-radius); margin-top: 60px;
+            position: relative; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        .bonus-tag { background: var(--primary-yellow); color: var(--primary-dark); padding: 5px 15px; border-radius: 5px; font-weight: 800; font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; display: inline-block; }
+        .bonus-amount { font-size: 4em; font-weight: 900; color: var(--primary-yellow); margin: 10px 0; line-height: 1; }
+        .conditions-list { background: rgba(255,255,255,0.1); border-radius: 12px; padding: 25px; margin-top: 30px; text-align: left; }
+        .conditions-list h4 { color: var(--primary-yellow); margin-bottom: 15px; font-size: 1.1em; }
+        .conditions-list ul { list-style: none; }
+        .conditions-list li { margin-bottom: 10px; padding-left: 25px; position: relative; opacity: 0.9; }
+        .conditions-list li::before { content: '✓'; position: absolute; left: 0; color: var(--success-green); font-weight: bold; }
+        .conditions-list a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); transition: all 0.3s; }
+        .conditions-list a:hover { color: var(--primary-yellow); border-bottom-color: var(--primary-yellow); }
+        .bonus-card p { opacity: 0.9; font-size: 1.1em; max-width: 650px; margin: 0 auto; }
+
+        .form-section { background: var(--secondary-bg); padding: 80px 20px; }
+        .form-wrapper { max-width: 650px; margin: 0 auto; background: white; padding: 50px; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+        .form-header { text-align: center; margin-bottom: 40px; }
+        .form-header h2 { font-size: 2em; margin-bottom: 10px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9em; color: var(--text-main); }
+        .form-group input, .form-group select { width: 100%; padding: 16px 20px; border: 2px solid #eee; border-radius: 12px; font-size: 1em; transition: all 0.3s; background: #fafafa; }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary-dark); background: white; box-shadow: 0 0 0 4px rgba(0,0,0,0.05); }
+        .submit-btn { width: 100%; padding: 20px; background: var(--primary-yellow); color: var(--primary-dark); border: none; border-radius: 12px; font-size: 1.1em; font-weight: 800; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; text-transform: uppercase; letter-spacing: 1px; }
+        .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(252, 224, 0, 0.4); }
+        .submit-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; box-shadow: none; }
+        .checkbox-group { display: flex; align-items: flex-start; gap: 12px; margin-top: 25px; font-size: 0.85em; color: var(--text-muted); text-align: left; }
+        .checkbox-group input[type="checkbox"] { width: auto; min-width: 20px; height: 20px; margin-top: 2px; cursor: pointer; }
+        .checkbox-group a { color: var(--primary-dark); text-decoration: underline; }
+
+        .success-message { display: none; text-align: center; padding: 40px; }
+        .success-message.show { display: block; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        .success-icon { width: 80px; height: 80px; background: #E8F5E9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.5em; color: var(--success-green); }
+        footer { background: var(--primary-dark); color: white; padding: 60px 20px; text-align: center; }
+        .footer-logo { font-weight: 800; font-size: 1.5em; margin-bottom: 20px; display: block; color: white; }
+        .footer-links a { color: #ccc; text-decoration: none; margin: 0 15px; font-size: 0.9em; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--primary-yellow); }
+        .legal-info { margin-top: 40px; font-size: 0.8em; color: #666; line-height: 1.8; border-top: 1px solid #333; padding-top: 30px; }
+
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); display: none; justify-content: center; align-items: center; z-index: 1000; padding: 20px; }
+        .modal-overlay.open { display: flex; }
+        .modal-content { background: white; padding: 40px; border-radius: 20px; max-width: 700px; max-height: 85vh; overflow-y: auto; position: relative; font-size: 0.95em; line-height: 1.6; }
+        .modal-close { position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 1.5em; cursor: pointer; }
+        .modal-content h2 { font-size: 1.5em; margin-bottom: 20px; color: var(--primary-dark); }
+        .modal-content h3 { font-size: 1.2em; margin-top: 20px; margin-bottom: 10px; }
+        .modal-content p { margin-bottom: 10px; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2em; } .section-title { font-size: 2em; }
+            .tg-banner { margin-top: -30px; flex-direction: column; text-align: center; }
+            .form-wrapper { padding: 30px 20px; } .bonus-amount { font-size: 3em; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content fade-in-up">
+            <div class="badge">🟢 Партнёрская регистрация</div>
+            <h1>Работа курьером<br>в Яндекс Еда</h1>
+            <p class="header-subtitle">Свободный график • До 160 000₽/мес • Бонусы новичкам</p>
+
+            <p class="disclaimer">
+                Сайт партнёра/агента. Не является официальным сайтом Яндекс Еды.
+                Регистрация выполняется на стороне сервиса по ссылке reg.eda.yandex.ru.
+            </p>
+
+            <a href="https://reg.eda.yandex.ru/?advertisement_campaign=forms_for_agents&user_invite_code=5941e4a8b7b2472dafac64a720ea91b2&utm_content=blank"
+               class="cta-primary" target="_blank" rel="nofollow">
+                Начать зарабатывать 🚀
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="tg-banner fade-in-up">
+            <div class="tg-banner-content">
+                <h3>Присоединяйся к комьюнити</h3>
+                <p>Лайфхаки, поддержка, розыгрыши и акции для наших курьеров</p>
+            </div>
+            <a href="https://t.me/kuriery_PRO" class="tg-btn" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.751-.244-1.349-.374-1.297-.789.027-.216.324-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.178.121.13.154.309.17.434-.002.101.013.322.003.501z"/></svg>
+                Открыть канал
+            </a>
+        </div>
+    </div>
+
+    <section class="container">
+        <div class="bonus-card fade-in-up">
+            <div class="bonus-tag">🎁 Эксклюзив для новичков</div>
+            <h3>Приветственный бонус</h3>
+            <div class="bonus-amount">5 000 ₽</div>
+            <p>Бонус выплачивается ИП Ильясов Тимур Валерьевич за счёт собственных средств (поверх выплат сервиса) при выполнении условий.</p>
+
+            <div class="conditions-list">
+                <h4>Условия получения:</h4>
+                <ul>
+                    <li>Зарегистрироваться по <a href="https://reg.eda.yandex.ru/?advertisement_campaign=forms_for_agents&user_invite_code=5941e4a8b7b2472dafac64a720ea91b2&utm_content=blank" target="_blank" rel="nofollow">партнёрской ссылке</a> с этого сайта (иначе бонус не начисляется).</li>
+                    <li>Заполнить <a href="#bonus-form">анкету ниже</a> (для фиксации заявки).</li>
+                    <li>Быть подписанным на канал <a href="https://t.me/kuriery_PRO" target="_blank" rel="nofollow">@kuriery_PRO</a>.</li>
+                    <li>Отработать первый месяц, выполнив минимум <b>120 заказов</b>.</li>
+                    <li>Подробные условия — <a href="#" onclick="openBonusModal(); return false;">здесь</a>.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="padding-top: 0;">
+        <h2 class="section-title fade-in-up"><span>Почему выбирают нас</span></h2>
+        <div class="benefits-grid">
+            <div class="benefit-card fade-in-up"><div class="benefit-icon">💰</div><h3>Высокий доход</h3><p>Доход зависит от времени, района и количества заказов. Чаевые остаются у тебя, плюс бонусы за пиковые часы.</p></div>
+            <div class="benefit-card fade-in-up"><div class="benefit-icon">⏰</div><h3>Свобода действий</h3><p>Планируй работу самостоятельно. Ты сам себе начальник.</p></div>
+            <div class="benefit-card fade-in-up"><div class="benefit-icon">⚡</div><h3>Быстрый старт</h3><p>Регистрация онлайн. После одобрения можно начинать выполнять заказы.</p></div>
+        </div>
+    </section>
+
+    <section class="form-section" id="bonus-form">
+        <div class="form-wrapper fade-in-up">
+            <div class="form-header">
+                <h2>Анкета на бонус</h2>
+                <p style="color: #666;">Заполни после регистрации в приложении Яндекс Еда</p>
+            </div>
+            <form id="applicationForm">
+                <div class="form-group"><label for="name">Имя и Фамилия *</label><input type="text" id="name" name="name" required placeholder="Иван Иванов"></div>
+                <div class="form-group"><label for="phone">Телефон *</label><input type="tel" id="phone" name="phone" required placeholder="+7 (999) 123-45-67"></div>
+                <div class="form-group"><label for="telegram">Telegram (Username) *</label><input type="text" id="telegram" name="telegram" required placeholder="@username"></div>
+                <div class="form-group"><label for="city">Город *</label><input type="text" id="city" name="city" required placeholder="Новосибирск"></div>
+
+                <div class="form-group">
+                    <label for="transport">Тип транспорта</label>
+                    <select id="transport" name="transport">
+                        <option value="Не указан">Выберите способ доставки</option>
+                        <option value="Пешком">Пешком</option>
+                        <option value="Велосипед">Велосипед</option>
+                        <option value="Электросамокат">Электросамокат</option>
+                        <option value="Автомобиль">Автомобиль</option>
+                    </select>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agreement" required>
+                    <label for="agreement">
+                        Я даю <a href="#" onclick="openModal(); return false;">согласие на обработку персональных данных</a>
+                        и подтверждаю, что ознакомлен с <a href="#" onclick="openBonusModal(); return false;">условиями бонуса</a>.
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">Отправить заявку</button>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">✅</div><h3>Заявка отправлена</h3>
+                <p style="margin: 15px 0 25px; color: #666;">Мы зафиксировали заявку. После выполнения 120 заказов напиши нам в Telegram для подтверждения и выплаты.</p>
+                <a href="https://t.me/kuriery_PRO" class="tg-btn" style="background: var(--primary-dark);" target="_blank">Перейти в канал</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">Курьеры PRO</span>
+            <div class="footer-links">
+                <a href="https://t.me/kuriery_PRO" target="_blank" rel="nofollow">Telegram</a>
+                <a href="mailto:kuriery-pro.online@yandex.ru">Email</a>
+                <a href="#" onclick="openModal(); return false;">Политика конфиденциальности</a>
+                <a href="#" onclick="openBonusModal(); return false;">Условия бонуса</a>
+            </div>
+            <div class="legal-info">
+                <p><strong>Исполнитель:</strong> ИП Ильясов Тимур Валерьевич</p>
+                <p><strong>ОГРНИП:</strong> 323547600000452</p>
+                <p><strong>Email:</strong> kuriery-pro.online@yandex.ru</p>
+                <p style="margin-top: 15px; font-size: 0.9em;">© 2026 Все права защищены. Сайт является информационным ресурсом партнёра/агента.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal: Privacy -->
+    <div class="modal-overlay" id="privacyModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">✖</button>
+            <h2>Политика обработки персональных данных</h2>
+            <p>Настоящая политика определяет порядок обработки персональных данных пользователей сайта kuriery-pro.online.</p>
+            <h3>1. Оператор</h3><p>Оператор персональных данных: ИП Ильясов Тимур Валерьевич.<br>Контакт для обращений: <a href="mailto:kuriery-pro.online@yandex.ru">kuriery-pro.online@yandex.ru</a>.</p>
+            <h3>2. Какие данные обрабатываются</h3><p>ФИО (если указано), номер телефона, Telegram/ник, город, тип транспорта, а также технические данные заявки (дата/время, URL страницы, источник перехода).</p>
+            <h3>3. Цели обработки</h3><p>Связь с пользователем по вопросам бонусной программы и подтверждение условий участия, обработка обращений и ведение учёта заявок.</p>
+            <h3>4. Правовые основания</h3><p>Обработка осуществляется на основании согласия субъекта персональных данных.</p>
+            <h3>5. Способы обработки</h3><p>Сбор через форму на сайте, хранение и просмотр заявок, обработка и учёт заявок.</p>
+            <h3>6. Передача третьим лицам</h3><p>Для технической обработки заявок может использоваться инфраструктура хостинг‑провайдера/платформы и сервисы хранения данных (в т.ч. Google Sheets/Apps Script).</p>
+            <h3>7. Сроки хранения</h3><p>Данные хранятся до достижения целей обработки или до отзыва согласия, если более длительный срок не требуется по закону.</p>
+            <h3>8. Отзыв согласия</h3><p>Согласие можно отозвать, направив запрос на email оператора. После получения отзыва оператор прекращает обработку, если отсутствуют иные законные основания.</p>
+            <h3>9. Обеспечение безопасности</h3><p>Оператор принимает необходимые организационные и технические меры для защиты персональных данных от неправомерного доступа.</p>
+            <p style="margin-top: 20px; color: #888; font-size: 0.8em;">Версия: 1.1, дата размещения: 20.02.2026</p>
+        </div>
+    </div>
+
+    <!-- Modal: Bonus Terms -->
+    <div class="modal-overlay" id="bonusModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeBonusModal()">✖</button>
+            <h2>Условия бонусной программы</h2>
+
+            <p><b>Размер бонуса:</b> 5 000 ₽.</p>
+            <p><b>Кто выплачивает:</b> ИП Ильясов Тимур Валерьевич за счёт собственных средств (поверх выплат сервиса).</p>
+
+            <h3>Обязательное условие</h3>
+            <p>Регистрация курьера в сервисе Яндекс Еда должна быть выполнена <b>только по партнёрской ссылке</b> с данного сайта. Если регистрация выполнена не по партнёрской ссылке, бонус не начисляется.</p>
+
+            <h3>Что нужно сделать</h3>
+            <p>1) Зарегистрироваться по партнёрской ссылке на reg.eda.yandex.ru.</p>
+            <p>2) Заполнить анкету на этом сайте.</p>
+            <p>3) Быть подписанным на Telegram‑канал @kuriery_PRO.</p>
+            <p>4) Выполнить минимум 120 заказов в течение первого месяца работы.</p>
+
+            <h3>Выплата</h3>
+            <p><b>Срок:</b> в течение 30 рабочих дней после подтверждения выполнения условий.</p>
+            <p><b>Способ:</b> перевод на карту через СБП.</p>
+
+            <h3>Причины отказа</h3>
+            <p>Бонус не выплачивается, если условия не выполнены, либо аккаунт курьера заблокирован/ограничен в сервисе Яндекс Еда.</p>
+
+            <p style="margin-top: 20px; color: #888; font-size: 0.8em;">Версия: 1.0, дата: 20.02.2026</p>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        // Fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+        // Privacy modal
+        function openModal() { document.getElementById('privacyModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+        function closeModal() { document.getElementById('privacyModal').classList.remove('open'); document.body.style.overflow = 'auto'; }
+        document.getElementById('privacyModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+
+        // Bonus modal
+        function openBonusModal() { document.getElementById('bonusModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+        function closeBonusModal() { document.getElementById('bonusModal').classList.remove('open'); document.body.style.overflow = 'auto'; }
+        document.getElementById('bonusModal').addEventListener('click', function(e) { if (e.target === this) closeBonusModal(); });
+
+        // City from URL (expand later if needed)
+        const CITY_MAP = {
+            "moskva":"Москва",
+            "spb":"Санкт‑Петербург",
+            "novosibirsk":"Новосибирск",
+            "ekaterinburg":"Екатеринбург",
+            "kazan":"Казань",
+            "nizhniy-novgorod":"Нижний Новгород",
+            "chelyabinsk":"Челябинск",
+            "samara":"Самара",
+            "omsk":"Омск",
+            "rostov-na-donu":"Ростов‑на‑Дону",
+            "ufa":"Уфа",
+            "krasnoyarsk":"Красноярск",
+            "voronezh":"Воронеж",
+            "permi":"Пермь"
+        };
+
+        function getCitySlugFromPath() {
+            const parts = location.pathname.split('/').filter(Boolean);
+            return parts[0] || '';
+        }
+
+        (function autofillCity(){
+            const slug = getCitySlugFromPath();
+            const city = CITY_MAP[slug];
+            const cityInput = document.getElementById('city');
+            if (cityInput && city && !cityInput.value) cityInput.value = city;
+        })();
+
+        // Form submit to Netlify Function
+        document.getElementById('applicationForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            btn.textContent = 'Отправка...';
+            btn.disabled = true;
+
+            const payload = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                telegram: document.getElementById('telegram').value,
+                city: document.getElementById('city').value,
+                transport: document.getElementById('transport').value,
+                citySlug: getCitySlugFromPath(),
+                page: location.href,
+                referrer: document.referrer,
+                consent: document.getElementById('agreement').checked
+            };
+
+            try {
+                const r = await fetch('/.netlify/functions/lead', {
+                    method: 'POST',
+                    headers: { 'content-type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await r.json();
+                if (!data.ok) throw new Error(data.error || 'Send failed');
+
+                document.getElementById('successMessage').classList.add('show');
+                document.getElementById('applicationForm').style.display = 'none';
+            } catch (error) {
+                alert('Ошибка отправки. Проверь интернет и попробуй ещё раз.');
+                btn.textContent = 'Отправить заявку';
+                btn.disabled = false;
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>
