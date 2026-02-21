@@ -8,7 +8,11 @@ export async function handler(event) {
   }
 
   if (event.httpMethod !== 'POST') {
-    return { statusCode: 405, body: 'Method Not Allowed' };
+    return {
+      statusCode: 405,
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ ok: false, error: 'Method Not Allowed' })
+    };
   }
 
   try {
@@ -46,18 +50,11 @@ export async function handler(event) {
     let json;
     try { json = JSON.parse(text); } catch { json = { ok: false, raw: text }; }
 
-    if (!json.ok) {
-      return {
-        statusCode: 502,
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ ok: false, error: 'AppsScript error', details: json })
-      };
-    }
-
+    // Главное изменение: возвращаем то, что вернул Apps Script
     return {
-      statusCode: 200,
+      statusCode: json.ok ? 200 : 502,
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ ok: true })
+      body: JSON.stringify(json.ok ? json : { ok: false, error: 'AppsScript error', details: json })
     };
   } catch (e) {
     return {
